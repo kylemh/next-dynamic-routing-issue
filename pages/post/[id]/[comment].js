@@ -1,9 +1,10 @@
-import { useRouter } from 'next/router'
-import Header from '../../../components/header'
+import { useRouter } from 'next/router';
+import Header from '../../../components/header';
 
 const Comment = () => {
-  const router = useRouter()
-  const { id, comment } = router.query
+  const router = useRouter();
+  console.log({ ...router });
+  const { id, comment } = router.query;
 
   return (
     <>
@@ -11,7 +12,7 @@ const Comment = () => {
       <h1>Post: {id}</h1>
       <h1>Comment: {comment}</h1>
     </>
-  )
-}
+  );
+};
 
-export default Comment
+export default Comment;

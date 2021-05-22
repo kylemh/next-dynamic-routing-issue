@@ -1,10 +1,11 @@
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import Header from '../../../components/header'
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import Header from '../../../components/header';
 
 const Post = () => {
-  const router = useRouter()
-  const { id } = router.query
+  const router = useRouter();
+  console.log({ ...router });
+  const { id } = router.query;
 
   return (
     <>
@@ -23,7 +24,7 @@ const Post = () => {
         </li>
       </ul>
     </>
-  )
-}
+  );
+};
 
-export default Post
+export default Post;
